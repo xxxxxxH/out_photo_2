@@ -23,6 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -41,4 +45,15 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.isseiaoki:simplecropview:1.1.8'
+    implementation 'com.afollestad.material-dialogs:bottomsheets:3.3.0'
+    implementation 'io.github.lucksiege:pictureselector:v2.7.2'
+    implementation 'com.github.getActivity:ToastUtils:9.5'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    implementation 'com.tencent:mmkv-static:1.2.8'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.0.9'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+
 }

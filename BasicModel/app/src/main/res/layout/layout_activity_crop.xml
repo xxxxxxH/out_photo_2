@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/layout_title_bar" />
 
     <com.isseiaoki.simplecropview.CropImageView
         android:id="@+id/cropImageView"
@@ -50,6 +51,7 @@
             android:src="@drawable/ic_rotate_right_black_24dp" />
 
         <TextView
+            android:id="@+id/free"
             android:layout_width="0dp"
             android:layout_height="?actionBarSize"
             android:layout_weight="1"
@@ -61,10 +63,12 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/fit"
             android:layout_width="0dp"
             android:layout_height="?actionBarSize"
             android:layout_weight="1"
             android:background="@drawable/free_selector"
+            android:clickable="true"
             android:gravity="center"
             android:text="fit image"
             android:textAllCaps="true"
@@ -77,7 +81,7 @@
 
         <RadioGroup
             android:id="@+id/radio_group"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="?actionBarSize"
             android:layout_gravity="center"
             android:orientation="horizontal"
@@ -85,73 +89,38 @@
 
             <RadioButton
                 android:id="@+id/radio_square"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="Square"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="Square" />
 
             <RadioButton
                 android:id="@+id/radio_34"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="3:4"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="3:4" />
 
             <RadioButton
                 android:id="@+id/radio_43"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="4:3"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="4:3" />
 
             <RadioButton
                 android:id="@+id/radio_916"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="9:16"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="9:16" />
 
             <RadioButton
                 android:id="@+id/radio_169"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="16:9"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="16:9" />
 
             <RadioButton
                 android:id="@+id/radio_77"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="7:7"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="7:7" />
 
             <RadioButton
                 android:id="@+id/radio_circle"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableTop="@mipmap/square"
-                android:gravity="center"
-                android:text="Circle"
-                android:textSize="14sp" />
+                style="@style/radiobutton"
+                android:text="Circle" />
         </RadioGroup>
     </HorizontalScrollView>
 

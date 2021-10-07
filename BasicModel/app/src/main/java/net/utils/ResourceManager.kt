@@ -4,6 +4,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
 import net.basicmodel.R
+import net.entity.ResourceEntity
 
 class ResourceManager {
     companion object {
@@ -36,7 +37,7 @@ class ResourceManager {
         return result
     }
 
-    private fun res2String(context: Context, id: Int): String {
+    fun res2String(context: Context, id: Int): String {
         val r = context.resources
         val uri = Uri.parse(
             ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
@@ -45,5 +46,32 @@ class ResourceManager {
                     + r.getResourceEntryName(id)
         )
         return uri.toString()
+    }
+
+    fun getPipMaskRes(
+        context: Context,
+        clazz: Class<*>,
+        folderName: String,
+        filter: String
+    ): ArrayList<ResourceEntity> {
+        return getResourceByFolder(context, clazz, folderName, filter)
+    }
+
+    fun getResourceByFolder(
+        context: Context,
+        clazz: Class<*>,
+        folderName: String,
+        filter: String
+    ): ArrayList<ResourceEntity> {
+        val result = ArrayList<ResourceEntity>()
+        for (field in clazz.fields) {
+            val name = field.name
+            if (name.startsWith(filter)) {
+                val id = context.resources.getIdentifier(name, folderName, context.packageName)
+                val entity = ResourceEntity(name, id)
+                result.add(entity)
+            }
+        }
+        return result
     }
 }
