@@ -110,9 +110,10 @@ class BokehActivity : BaseActivity() {
 
     private fun initCloseBtn() {
         clear.setOnClickListener {
+            rgBokeh.clearCheck()
             recycler_res.visibility = View.INVISIBLE
             recycler_effect.visibility = View.INVISIBLE
-            rgBokeh.clearCheck()
+
         }
     }
 

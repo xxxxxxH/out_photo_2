@@ -46,7 +46,7 @@ class PipActivity : BaseActivity() {
 
     private fun initTitleBar() {
         leftTv.text = "back"
-        titleTv.text = "Bokeh"
+        titleTv.text = "pip"
         rightTv.text = "done"
         leftTv.setOnClickListener {
             finish()
@@ -59,9 +59,9 @@ class PipActivity : BaseActivity() {
 
     private fun initCloseBtn() {
         clear.setOnClickListener {
+            rgPip.clearCheck()
             recycler_res.visibility = View.INVISIBLE
             recycler_effect.visibility = View.INVISIBLE
-            rgPip.clearCheck()
         }
     }
 

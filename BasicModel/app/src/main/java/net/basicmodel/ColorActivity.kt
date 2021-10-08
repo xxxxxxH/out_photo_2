@@ -63,9 +63,10 @@ class ColorActivity : BaseActivity() {
 
     private fun initCloseBtn() {
         clear.setOnClickListener {
+            rgColor.clearCheck()
             recycler_res.visibility = View.INVISIBLE
             recycler_effect.visibility = View.INVISIBLE
-            rgColor.clearCheck()
+
         }
     }
 

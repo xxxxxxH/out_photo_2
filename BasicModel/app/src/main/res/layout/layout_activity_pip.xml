@@ -93,6 +93,7 @@
             style="@style/radiobutton"
             android:layout_weight="1"
             android:width="0dp"
+            android:visibility="gone"
             android:text="FOREGRPUND" />
 
         <RadioButton
@@ -100,7 +101,7 @@
             style="@style/radiobutton"
             android:layout_weight="1"
             android:width="0dp"
-            android:text="sticker" />
+            android:text="STICKER" />
 
     </RadioGroup>
 
