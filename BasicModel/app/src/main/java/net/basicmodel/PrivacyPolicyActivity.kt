@@ -17,7 +17,7 @@ class PrivacyPolicyActivity:BaseActivity() {
     private fun initTitleBar(){
         leftTv.text = "back"
         titleTv.text = "privacy policy"
-        rightTv.visibility = View.GONE
+        rightTv.visibility = View.INVISIBLE
         leftTv.setOnClickListener {
             finish()
         }
